@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import Template from "./template"
 
 export interface RootLayoutProps {
     children: ReactNode;
@@ -9,12 +10,9 @@ export default function RootLayout({
 }){
     return (
         <html lang="en">
-            <head>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Document</title>
-            </head>
             <body>
-                {children }
+                <div>root layout</div>
+                <Template key="home">{children}</Template>
             </body>
         </html>
     );
